@@ -1,0 +1,304 @@
+.toolbar {
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: auto;
+    left: auto;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    /*
+    background-color: beige;
+    */
+    background-color: rgb(236,236,236);
+    overflow: visible;
+    font-family: Arial, Helvetica, sans-serif;
+    z-index: 1;
+}
+
+.menu-list > li {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem 0 1rem; /* Espacement dans submenu */
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: text-decoration-color 0.3s ease;
+}
+
+.menu-list > li:hover {
+
+    text-decoration-color: black;
+}
+
+.menu-link {
+
+    cursor: pointer;
+}
+
+.menu-link > a {
+    
+    text-decoration: none;
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: text-decoration-color 0.3s ease;
+}
+
+.menu-link > a:hover {
+
+    text-decoration-color: black;
+}
+
+.dropdown {
+
+    position: relative;
+    display: block;
+    top: auto;
+    left: auto;
+    width: fit-content;
+    max-width: 4rem;
+    height: fit-content;
+    /*
+    background-color: rgb(80, 226, 43);
+    */
+    background-color: rgb(236,236,236);
+}
+
+.submenu-wrapper {
+
+    position: absolute;
+    display: none;
+    top: 0%;
+    left: 100%;
+    width: max-content;
+    height: max-content;
+    margin: 0;
+    padding: 0;
+    /*
+    background-color: blueviolet;
+    */
+    background-color: rgb(236,236,236);
+    border: 1px solid black;
+}
+
+.submenu-wrapper > img {
+
+    position: relative;
+    display: block;
+    top: auto;
+    left: auto;
+    width: auto;
+    height: auto;
+    max-width: 8rem;
+    max-height: 16rem;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.submenu {
+
+    position: relative;
+    display: block;
+    top: auto;
+    left: auto;
+    width: fit-content;
+    max-width: 12rem; /* 8rem image + 4rem li */
+    margin: 0;
+    padding: 0;
+    /*
+    background-color:hsla(30,100%,50%,1);
+    */
+    background-color: rgb(236,236,236);
+    list-style: none;
+}
+
+.submenu > li {
+
+    display: flex;
+    align-items: center;
+    padding: 2rem 4rem 2rem 4rem;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: text-decoration-color 0.3s ease;
+}
+
+.submenu > li:hover {
+
+    text-decoration-color: black;
+}
+
+@media (min-width: 400px) and (max-width: 1000px) {
+
+    .toolbar {
+
+        height: 15%;
+        border-bottom: 1px solid black;
+        background-color: rgb(236,236,236);
+        background-image: url("../../assets/ToolBar/logo.png");
+        background-size: contain;
+        background-position: right;
+        background-repeat: no-repeat;
+    }
+
+    .menu {
+
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 50%;
+        left: 5%;
+        width: 15%;
+        height: 45%;
+        transform-origin: center center;
+        transform: translateY(-50%);
+        margin: 0;
+        padding: 0;
+        /*
+        background-color: aqua;
+        */
+        background-color: rgb(236,236,236);
+    }
+
+    .menu-toggle {
+
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        transform-origin: center center;
+        transform: translate(-50%, -50%);
+        margin: 0;
+        padding: 0;
+        /*
+        background-color: whitesmoke;
+        */
+        background-color: rgb(236,236,236);
+        font-weight: normal !important;
+        font-family: Arial, Helvetica, sans-serif !important;
+    }
+
+    .menu-list {
+
+        position: absolute;
+        display: none;
+        top: 0%;
+        left: 100%;
+        width: fit-content;
+        max-width: 400%;
+        margin: 0;
+        padding: 0;
+        /*
+        background-color: green;
+        */
+        background-color: rgb(236,236,236);
+        list-style: none;
+        border: 1px solid black;
+    }
+
+    .menu-list > li {
+
+        padding: 2rem 1rem 1rem 1rem; /* Espacement dans submenu */
+    }
+}
+
+@media (min-width: 1001px) {
+
+    .menu {
+
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        transform-origin: center center;
+        margin: 0;
+        padding: 0;
+        /*
+        background-color: aqua;
+        */
+        background-color: rgb(236,236,236);
+    }
+
+    .menu-toggle {
+
+        display: none;
+    }
+
+    /* Customisation arrière-plan toolbar */
+    .menu-list {
+
+        position: absolute;
+        display: flex !important;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10%;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        /*
+        background-color: green;
+        */
+        background-color: rgb(236,236,236);
+        background-image: url("../../assets/ToolBar/logo.png");
+        background-size: contain;
+        background-position: left;
+        background-repeat: no-repeat;
+        list-style: none;
+        border-bottom: 1px solid black;
+    }
+}
+
+@media (min-width: 1001px) and (max-width: 1700px) {
+
+    .menu-list {
+
+        background-image: url("../../assets/ToolBar/logo.png");
+        background-size: 5% 30%;
+        background-position: left;
+        background-repeat: no-repeat;
+    }
+}
+
+@media (min-width: 1001px) and (max-width: 1900px) {
+
+    .toolbar {
+
+        height: 30%;
+    }
+}
+
+@media (min-width: 1901px) {
+
+    .toolbar {
+
+        height: 15%;
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+
+    .dropdown:hover > .submenu-wrapper {
+
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+}

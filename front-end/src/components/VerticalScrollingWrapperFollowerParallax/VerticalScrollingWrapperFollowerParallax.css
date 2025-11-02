@@ -1,0 +1,107 @@
+.vertical-scrolling-wrapper-follower-parallax {
+
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    /*
+    background-color: darkgoldenrod;
+    */
+    overflow: hidden;
+}
+
+.vertical-scrolling-wrapper-follower-parallax-svg {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform-origin: center center;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
+    background-color: rgb(236,236,236);
+    z-index: 1;
+}
+
+.vertical-scrolling-wrapper-follower-parallax-svg > path {
+
+    fill: none;
+    stroke: none;
+    stroke-width: 0.01px;
+}
+
+.vertical-scrolling-wrapper-follower-parallax-follower {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 50%;
+    /*
+    background-color: orange;
+    */
+    background-image: url("../../assets/VerticalScrollingWrapperFollowerParallax/follower.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    visibility: hidden;
+    z-index: 10;
+}
+
+.vertical-scrolling-wrapper-follower-parallax-background-1 {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 200%;
+    transform-origin: center center;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
+    /*
+    background-color: cadetblue;
+    */
+    background-image: url("../../assets/VerticalScrollingWrapperFollowerParallax/img1.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+
+.vertical-scrolling-wrapper-follower-parallax-background-2 {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    transform-origin: center center;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
+    /*
+    background-color:darkolivegreen;
+    */
+    background-image: url("../../assets/VerticalScrollingWrapperFollowerParallax/img2.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 3;
+}
+
+@media (min-width: 400px) and (max-width: 1000px) {
+
+    .vertical-scrolling-wrapper-follower-parallax-background-1 {
+
+        background-size: 100% 100%;
+    }
+}

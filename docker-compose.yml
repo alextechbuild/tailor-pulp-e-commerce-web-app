@@ -1,0 +1,45 @@
+version: '3.9'
+
+services:
+  postgres_db:
+    image: docker.io/library/postgres:16
+    container_name: postgres_db
+    environment:
+      POSTGRES_USER: db_user
+      POSTGRES_PASSWORD: db_user
+      POSTGRES_DB: tailor_pulp_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+
+  backend:
+    build: ./back-end
+    container_name: backend
+    env_file:
+      - ./back-end/.env
+    ports:
+      - "4000:4000"
+    volumes:
+      - ./back-end:/usr/src/app/back-end
+      - ./back-end/certs:/usr/src/app/back-end/certs:ro
+    depends_on:
+      - postgres_db
+
+  frontend:
+    build: ./front-end
+    container_name: frontend
+    env_file:
+      - ./front-end/.env
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./front-end:/usr/src/app/front-end
+      - ./front-end/public/assets:/usr/src/app/front-end/public/assets:cached
+      - ./back-end/certs:/usr/src/app/back-end/certs:ro   # HTTPS en dev
+    depends_on:
+      - backend
+
+volumes:
+  db_data:

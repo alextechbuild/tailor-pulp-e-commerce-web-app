@@ -1,0 +1,326 @@
+.product-page {
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+}
+
+.product-page-maincontent {
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    top: auto;
+    left: auto;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(236, 236, 236);;
+    background-image: url("../../assets/ProductPage/background_part1.png"), url("../../assets/ProductPage/background_part2.png");
+    background-size: 50% 100%, 50% 100%;
+    background-position: left, right;
+    background-repeat: no-repeat, no-repeat;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 0;
+}
+
+.product-page-wrapper {
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 90%;
+    height: 90%;
+    margin: 2rem 0 2rem 0;
+    padding: 0;
+    border: 1px solid rgb(76, 76, 76);
+    background: rgb(236, 236, 236);
+    overflow-x: hidden;
+    overflow-y: auto;
+    border-radius: 10px;
+}
+
+.product-page-wrapper-description {
+
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    gap: 10%;
+    flex-shrink: 0;
+    width: 90%;
+    height: 60%;
+    margin: 0;
+    padding: 1rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.product-page-wrapper-description > img {
+
+    position: relative;
+    display: block;
+    flex-shrink: 0;
+    top: auto;
+    left: auto;
+    width: auto;
+    height: 100%;
+    max-width: 100%;
+    border-radius: 20px;
+    object-fit: contain;
+}
+
+.product-page-wrapper-description-text {
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    flex-shrink: 0;
+    width: 50%;
+    height: 100%;
+    text-align: left;
+    margin: 0 1rem 0 1rem;
+    padding: 1rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border: 1px solid black;
+}
+
+.product-page-wrapper-description-text > p {
+
+    padding-bottom: 1rem;
+}
+
+.product-page-wrapper-buybox {
+
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 4rem;
+    width: 90%;
+    height: 10%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.product-page-wrapper-buybox > select {
+
+    background: transparent;
+    border: 1px solid rgb(82, 82, 82);
+    border-radius: 4px;
+}
+
+.product-page-wrapper-buybox > select:hover {
+
+    background-color: rgb(206, 206, 206);
+}
+
+/* Customisation Action Buttons */
+.product-page-wrapper-buybox-add-button {
+
+    position: relative;
+    flex-shrink: 0;
+    transform-origin: center center;
+    transform: scale(1);
+    margin: 1rem 0 1rem 0;
+    padding: 1rem 0 1rem 0;
+    background-color: rgb(206, 206, 206);
+    border: 0.5px solid rgb(82, 82, 82);
+    border-radius: 4px;
+    cursor: pointer;
+    overflow: hidden; /* Pour que le ::before reste à l'intérieur de la div */
+    z-index: 1;
+}
+
+.product-page-wrapper-buybox-add-button {
+
+    width: 20%;
+    height: 10%;
+}
+
+.product-page-wrapper-buybox-add-button:hover {
+
+    background-color: rgb(255, 205, 147);
+    animation: pulse-animation 1s infinite;
+}
+
+@keyframes pulse-animation {
+
+    0% {
+
+        transform: scale(1);
+    }
+    50% {
+
+        transform: scale(1.05);
+    }
+    100% {
+
+        transform: scale(1);
+    }
+}
+
+.product-page-wrapper-buybox-add-button::before {
+
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    background-color: rgb(206, 206, 206);
+    transition: top 0.5s ease;
+    z-index: 2;
+}
+
+.product-page-wrapper-buybox-add-button:hover::before {
+
+    top: 100%;
+}
+
+.product-page-wrapper-buybox-add-button > span {
+
+    position: absolute;
+    width: auto;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform-origin: center center;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    font-size: 15px;
+    transition: color 1s ease;
+    z-index: 3;
+}
+
+.product-page-wrapper-buybox-add-button:hover > span {
+
+    color: rgb(82, 82, 82);
+}
+
+@media (min-width: 400px) and (max-width: 1000px) {
+
+    .product-page-maincontent {
+
+        background-color: rgb(236, 236, 236);
+        background-image: url("../../assets/ProductPage/background_part2.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .product-page-wrapper {
+
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 1rem;
+        margin: 2rem 0 2rem 0;
+        padding: 0;
+    }
+
+    .product-page-wrapper-description {
+
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 10%;
+        flex-shrink: 0;
+        width: 80%;
+        height: 60%;
+        margin: 0;
+        padding: 1rem;
+        overflow-x: hidden;
+        overflow-y: auto;
+        border: 1px solid black;
+        border-radius: 10px;
+    }
+
+    .product-page-wrapper-description > img {
+
+        position: relative;
+        display: block;
+        flex-shrink: 0;
+        top: auto;
+        left: auto;
+        width: auto;
+        height: 100%;
+        max-width: 100%;
+        border-radius: 20px;
+        object-fit: contain;
+    }
+
+    .product-page-wrapper-description-text {
+
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 1rem;
+        flex-shrink: 0;
+        width: 100%;
+        height: 100%;
+        text-align: left;
+        margin: 0 1rem 0 1rem;
+        padding: 1rem;
+        overflow: visible;
+        border: none;
+    }
+
+    .product-page-wrapper-buybox {
+
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        flex-shrink: 0;
+        width: 80%;
+        height: 15%;
+        margin: 0;
+        padding: 1rem;
+        overflow-x: hidden;
+        overflow-y: auto;
+        border: 1px solid black;
+        border-radius: 10px;
+    }
+
+    .product-page-wrapper-buybox-add-button {
+
+        width: 50%;
+        height: 10%;
+    }
+}

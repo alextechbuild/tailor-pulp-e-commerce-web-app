@@ -1,0 +1,288 @@
+.footer {
+
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    bottom: -40%;
+    left: 0%;
+    height: 40%;
+    margin: 0;
+    padding: 0;
+    border-top: 0.5px solid black;
+    background-color: rgb(236,236,236);
+    border-top: 1px solid black;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.footer h5 {
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.footer-wrapper {
+
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 100%;
+    height: 50%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.footer-resources {
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-shrink: 0;
+    width: 50%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.footer-resources-buttons {
+
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    gap: 20px;
+    width: 100%;
+    height: 50%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.footer-about-us {
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-shrink: 0;
+    width: 50%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.footer-about-us-links {
+
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    gap: 20px;
+    width: 100%;
+    height: 50%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.footer-more {
+
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 30px;
+    width: 100%;
+    height: 50%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.footer-button {
+
+    position: relative;
+    flex-shrink: 0;
+    width: 125px;
+    height: 45px;
+    transform-origin: center center;
+    transform: scale(1);
+    margin: 0;
+    padding: 0;
+    background-color: rgb(236,236,236);
+    cursor: pointer;
+    overflow: hidden; /* Pour que le ::before reste à l'intérieur de la div */
+    border: 0.5px solid black;
+    transition: transform 0.3s ease;
+    z-index: 1;
+}
+
+.footer-button:hover {
+
+    transform: scale(1.05);
+}
+
+.footer-button::before {
+
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    left: 0%;
+    background-color: rgb(73, 73, 73);
+    transition: top 0.3s ease;
+    z-index: 2;
+}
+
+.footer-button:hover::before {
+
+    top: 0%;
+}
+
+.footer-button span {
+
+    position: absolute;
+    width: auto;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform-origin: center center;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    transition: color 1s ease;
+    z-index: 3;
+}
+
+.footer-button:hover span {
+
+    color: whitesmoke;
+}
+
+@media (min-width: 400px) and (max-width: 700px) {
+
+    .footer {
+
+        bottom: -70%;
+        height: 70%;
+        gap: 0;
+    }
+
+    .footer-wrapper {
+
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 90%;
+        gap: 0;
+    }
+
+    .footer-resources {
+
+        width: 100%;
+        height: 45%;
+    }
+
+    .footer-about-us {
+
+        width: 100%;
+        height: 55%;
+    }
+
+    .footer-resources-buttons {
+
+        gap: 5px;
+    }
+
+    .footer-about-us-links {
+
+        gap: 20px;
+        overflow: visible;
+    }
+
+    .footer-more {
+
+        height: 10%;
+    }
+}
+
+@media (min-width: 701px) and (max-width: 1400px) {
+
+    .footer {
+
+        bottom: -45%;
+        height: 45%;
+        gap: 0;
+    }
+
+    .footer-wrapper {
+
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 90%;
+        gap: 0;
+    }
+
+    .footer-resources {
+
+        width: 100%;
+        height: 45%;
+    }
+
+    .footer-about-us {
+
+        width: 100%;
+        height: 55%;
+    }
+
+    .footer-resources-buttons {
+
+        gap: 5px;
+    }
+
+    .footer-about-us-links {
+
+        gap: 20px;
+        overflow: visible;
+    }
+
+    .footer-more {
+
+        height: 10%;
+    }
+}
+
+@media (min-width: 1401px) and (max-width: 1900px) {
+
+    .footer-button {
+
+        width: 16%;
+        height: 60%;
+    }
+}

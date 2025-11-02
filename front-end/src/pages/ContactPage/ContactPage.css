@@ -1,0 +1,314 @@
+.contact-page {
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+    animation: contact-page-animation 2s ease-in-out forwards;
+    animation-delay: 0.1s;
+    z-index: 0;
+}
+
+@keyframes contact-page-animation {
+
+    0% {
+
+        transform: scale(1.03);
+    }
+    100% {
+
+        transform: scale(1);
+    }
+}
+
+/* Customisation Overlay */
+.contact-page-strip-1-overlay, 
+.contact-page-strip-2-overlay, 
+.contact-page-strip-3-overlay, 
+.contact-page-strip-4-overlay {
+
+    display: block;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    transform-origin: bottom right;
+    overflow: hidden;
+    z-index: 0;
+    animation: contact-page-strip-overlay-animation 1s ease forwards;
+}
+
+.contact-page-strip-1-overlay {
+
+    left: 0%;
+    width: 25%;
+    background-color: rgb(255, 221, 193);
+    animation-delay: 0s;
+}
+
+.contact-page-strip-2-overlay {
+
+    left: 25%;
+    width: 25%;
+    background-color: rgb(250, 183, 143);
+    animation-delay: 0.1s;
+}
+
+.contact-page-strip-3-overlay {
+
+    left: 50%;
+    width: 25%;
+    background-color: rgb(255, 174, 110);
+    animation-delay: 0.2s;
+}
+
+.contact-page-strip-4-overlay {
+
+    left: 75%;
+    width: 25%;
+    background-color: rgb(255, 161, 73);
+    animation-delay: 0.3s;
+}
+
+@keyframes contact-page-strip-overlay-animation {
+
+    0% {
+
+        transform: scaleY(1);
+    }
+    100% {
+
+        transform: scaleY(0);
+    }
+}
+
+.contact-page-wrapper {
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+}
+
+.contact-page-maincontent {
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    top: auto;
+    left: auto;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(236, 236, 236);;
+    background-image: url("../../assets/LoggingPage/background_part1.png"), url("../../assets/LoggingPage/background_part2.png");
+    background-size: 50% 100%, 50% 100%;
+    background-position: left, right;
+    background-repeat: no-repeat, no-repeat;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 0;
+}
+
+.contact-page-maincontent-wrapper {
+
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 50%;
+    height: 90%;
+    margin: 2rem 0 2rem 0;
+    border: 1px solid rgb(76, 76, 76);
+    border-radius: 20px;
+    background-color: rgb(236, 236, 236);
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.contact-page-maincontent-wrapper-status  {
+
+    margin: 4rem 1rem 2rem 1rem;
+}
+
+.contact-page-maincontent-wrapper-gdpr {
+
+    margin: 2rem 1rem 2rem 1rem;
+}
+
+.contact-page-maincontent-wrapper-form {
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin: 8rem 0 2rem 0;
+    background: transparent;
+}
+
+.contact-page-maincontent-wrapper-textarea {
+
+    position: relative;
+    display: flex;
+    flex-shrink: 0;
+    margin: 2rem 0 2rem 0;
+    width: 90%;
+    height: 90%;
+    background-color: rgb(236, 236, 236);
+    border: 0.5px solid rgb(189, 189, 189);
+    border-radius: 5px;
+    resize: none;
+    font-size: 16px;
+}
+
+.contact-page-maincontent-wrapper-textarea:focus {
+
+    outline: 1px solid rgb(82, 82, 82);
+}
+
+/* Customisation Action Buttons */
+.contact-page-maincontent-wrapper-send-button {
+
+    position: relative;
+    flex-shrink: 0;
+    transform-origin: center center;
+    transform: scale(1);
+    padding: 1rem 0 1rem 0;
+    background-color: rgb(206, 206, 206);
+    border: 0.5px solid rgb(82, 82, 82);
+    border-radius: 4px;
+    cursor: pointer;
+    overflow: hidden; /* Pour que le ::before reste à l'intérieur de la div */
+    z-index: 1;
+}
+
+.contact-page-maincontent-wrapper-send-button {
+
+    margin: 1rem auto 1rem auto;
+}
+
+.contact-page-maincontent-wrapper-send-button {
+
+    width: 45%;
+    height: 10%;
+}
+
+.contact-page-maincontent-wrapper-send-button:hover {
+
+    background-color: rgb(255, 205, 147);
+    animation: pulse-animation 1s infinite;
+}
+
+@keyframes pulse-animation {
+
+    0% {
+
+        transform: scale(1);
+    }
+    50% {
+
+        transform: scale(1.05);
+    }
+    100% {
+
+        transform: scale(1);
+    }
+}
+
+.contact-page-maincontent-wrapper-send-button::before {
+
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    background-color: rgb(206, 206, 206);
+    transition: top 0.5s ease;
+    z-index: 2;
+}
+
+.contact-page-maincontent-wrapper-send-button:hover::before {
+
+    top: 100%;
+}
+
+.contact-page-maincontent-wrapper-send-button > span {
+
+    position: absolute;
+    width: auto;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform-origin: center center;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    font-size: 15px;
+    transition: color 1s ease;
+    z-index: 3;
+}
+
+.contact-page-maincontent-wrapper-send-button:hover > span {
+
+    color: rgb(82, 82, 82);
+}
+
+@media (min-width: 400px) and (max-width: 1000px) {
+
+    .contact-page-maincontent {
+
+        background-color: rgb(236, 236, 236);
+        background-image: url("../../assets/LoggingPage/background_part2.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .contact-page-maincontent-wrapper {
+
+        width: 100%;
+        height: 90%;
+        margin: 2rem 0 2rem 0;
+    }
+
+    .contact-page-maincontent-wrapper-send-button {
+
+        width: 70%;
+    }
+}
+
+@media (min-width: 1001px) and (max-width: 1900px) {
+
+    .contact-page-maincontent-wrapper {
+
+        width: 80%;
+        height: 90%;
+        margin: 2rem 0 2rem 0;
+    }
+
+    .contact-page-maincontent-wrapper-send-button {
+
+        width: 40%;
+    }
+}

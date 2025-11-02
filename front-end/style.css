@@ -1,0 +1,293 @@
+html {
+
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body, html {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.word {
+
+    display: inline-block;
+    opacity: 0;
+    transform-origin: center center;
+    transform: translateY(-2rem);
+    animation: word-animation 1s ease-in-out forwards;
+}
+
+@keyframes word-animation {
+
+    0% {
+
+        transform: translateY(-2rem);
+        opacity: 0;
+    }
+    100% {
+
+        transform: translateY(0rem);
+        opacity: 1;
+    }
+}
+
+.letter {
+
+    display: inline-block;
+    opacity: 0;
+    transform-origin: center center;
+    transform: translateY(4rem);
+    animation: letter-animation 0.5s ease forwards, letter-animation-loop 3s ease alternate infinite 0.5s;
+}
+
+@keyframes letter-animation {
+
+    0% {
+
+        transform: translateY(-4rem);
+        opacity: 1;
+    }
+    70% {
+
+        transform: translateY(2rem);
+        opacity: 1;
+    }
+    100% {
+
+        transform: translateY(0rem);
+        opacity: 1;
+    }
+}
+
+@keyframes letter-animation-loop {
+
+    0% {
+
+        transform: translateY(-4px);
+    }
+    100% {
+
+        transform: translateY(4px);
+    }
+}
+
+.bold {
+
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.underline {
+
+    text-decoration: underline;
+}
+
+.important {
+
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+}
+
+@keyframes shopping-page-animation {
+
+    0% {
+
+        transform: scale(1.03);
+    }
+    100% {
+
+        transform: scale(1);
+    }
+}
+
+/* Customisation Overlay Shop */
+.shopping-page-strip-1-overlay, 
+.shopping-page-strip-2-overlay, 
+.shopping-page-strip-3-overlay, 
+.shopping-page-strip-4-overlay {
+
+    display: block;
+    position: absolute;
+    left: 0%;
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    transform-origin: top left;
+    overflow: hidden;
+    z-index: 0;
+    animation: shopping-page-strip-overlay-animation 1s ease forwards;
+}
+
+.shopping-page-strip-1-overlay {
+
+    top: 0%;
+    height: 25%;
+    background-color: rgb(255, 221, 193);
+    animation-delay: 0s;
+}
+
+.shopping-page-strip-2-overlay {
+
+    top: 25%;
+    height: 25%;
+    background-color: rgb(250, 183, 143);
+    animation-delay: 0.1s;
+}
+
+.shopping-page-strip-3-overlay {
+
+    top: 50%;
+    height: 25%;
+    background-color: rgb(255, 174, 110);
+    animation-delay: 0.2s;
+}
+
+.shopping-page-strip-4-overlay {
+
+    top: 75%;
+    height: 25%;
+    background-color: rgb(255, 161, 73);
+    animation-delay: 0.3s;
+}
+
+
+.shopping-page-strip-5-overlay, 
+.shopping-page-strip-6-overlay, 
+.shopping-page-strip-7-overlay, 
+.shopping-page-strip-8-overlay {
+
+    display: block;
+    position: absolute;
+    left: 50%;
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    transform-origin: top right;
+    overflow: hidden;
+    z-index: 0;
+    animation: shopping-page-strip-overlay-animation 1s ease forwards;
+}
+
+.shopping-page-strip-5-overlay {
+
+    top: 0%;
+    height: 25%;
+    background-color: rgb(255, 221, 193);
+    animation-delay: 0.3s;
+}
+
+.shopping-page-strip-6-overlay {
+
+    top: 25%;
+    height: 25%;
+    background-color: rgb(250, 183, 143);
+    animation-delay: 0.2s;
+}
+
+.shopping-page-strip-7-overlay {
+
+    top: 50%;
+    height: 25%;
+    background-color: rgb(255, 174, 110);
+    animation-delay: 0.1s;
+}
+
+.shopping-page-strip-8-overlay {
+
+    top: 75%;
+    height: 25%;
+    background-color: rgb(255, 161, 73);
+    animation-delay: 0s;
+}
+
+@keyframes shopping-page-strip-overlay-animation {
+
+    0% {
+
+        transform: scaleX(1);
+    }
+    100% {
+
+        transform: scaleX(0);
+    }
+}
+
+.privacy-wrapper {
+
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    text-align: left !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+}
+
+.privacy-wrapper > h1,
+.privacy-wrapper > h2,
+.privacy-wrapper > h3,
+.privacy-wrapper > h4,
+.privacy-wrapper > h5,
+.privacy-wrapper > p {
+
+    margin: 20px;
+}
+
+.privacy-wrapper > h1 {
+
+    font-size: 23px;
+}
+
+.privacy-wrapper > h2 {
+
+    font-size: 22px;
+}
+
+.privacy-wrapper > h3 {
+
+    font-size: 21px;
+}
+
+.privacy-wrapper > h4 {
+
+    font-size: 20px;
+}
+
+.privacy-wrapper > h5 {
+
+    font-size: 19px;
+}
+
+.privacy-wrapper > p {
+
+    font-size: 18px;
+}
+
+.homepage-animation-section {
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    margin: 1rem 0 1rem 0;
+    text-align: center;
+}

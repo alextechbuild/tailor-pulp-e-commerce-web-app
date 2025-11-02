@@ -1,0 +1,89 @@
+.homepage {
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+    animation: homepage-animation 2s ease-in-out forwards;
+    animation-delay: 0.1s;
+    z-index: 0;
+}
+
+@keyframes homepage-animation {
+
+    0% {
+
+        transform: scale(1.03);
+    }
+    100% {
+
+        transform: scale(1);
+    }
+}
+
+.homepage::after {
+
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    z-index: 0;
+    animation: homepage-overlay-animation 1s ease forwards;
+}
+
+@keyframes homepage-overlay-animation {
+
+    0% {
+
+        transform: translateX(0%);
+    }
+    100% {
+
+        transform: translateX(100%);
+    }
+}
+
+.homepage-wrapper {
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+}
+
+.maincontent {
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-shrink: 1; /* Pour la toolbar */
+    top: auto;
+    left: auto;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(236, 236, 236) !important;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 0;
+}

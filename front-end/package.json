@@ -1,0 +1,51 @@
+{
+  "name": "front-end",
+  "version": "0.0.0",
+  "type": "module",
+  "main": "./src/App.jsx",
+  "scripts": {
+    "dev": "HTTPS=true vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext .js,.jsx",
+    "format": "prettier --write ."
+  },
+  "author": "AlexTechBuild",
+  "license": "MIT License",
+  "description": "An e-commerce website for a fictional company named Tailor'Pulp",
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/icons-material": "^7.3.4",
+    "@mui/lab": "^7.0.1-beta.18",
+    "@mui/material": "^7.3.4",
+    "@mui/x-date-pickers": "^8.12.0",
+    "@react-oauth/google": "^0.12.2",
+    "@stripe/stripe-js": "^8.0.0",
+    "date-fns": "^4.1.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-google-recaptcha": "^3.1.0",
+    "react-input-mask": "^2.0.4",
+    "react-phone-input-2": "^2.15.1",
+    "react-router-dom": "^7.9.1",
+    "react-select-country-list": "^2.2.3",
+    "stripe": "^19.1.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.34.0",
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
+    "@vitejs/plugin-react": "^5.0.0",
+    "@vitejs/plugin-react-swc": "^4.0.1",
+    "eslint": "^9.34.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^16.3.0",
+    "prettier": "^3.6.2",
+    "vite": "^7.1.4"
+  }
+}

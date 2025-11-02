@@ -1,0 +1,178 @@
+.twofa-page {
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+    font-size: 18px;
+}
+
+.twofa-page-maincontent {
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    top: auto;
+    left: auto;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(236, 236, 236);;
+    background-image: url("../../assets/LoggingPage/background_part1.png"), url("../../assets/LoggingPage/background_part2.png");
+    background-size: 50% 100%, 50% 100%;
+    background-position: left, right;
+    background-repeat: no-repeat, no-repeat;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 0;
+}
+
+.twofa-page-wrapper {
+
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 90%;
+    margin: 2rem 0 2rem 0;
+    border: 1px solid rgb(76, 76, 76);
+    background: rgb(236, 236, 236);
+}
+
+/* Customisation Action Buttons */
+.twofa-page-proceed-button, 
+.twofa-page-enable-2fa-button,
+.twofa-page-disable-2fa-button, 
+.twofa-page-confirm-2fa-button {
+
+    position: relative;
+    flex-shrink: 0;
+    transform-origin: center center;
+    transform: scale(1);
+    margin: 1rem auto 1rem auto;
+    padding: 1rem 0 1rem 0;
+    background-color: rgb(206, 206, 206);
+    border: 0.5px solid rgb(82, 82, 82);
+    border-radius: 4px;
+    cursor: pointer;
+    overflow: hidden; /* Pour que le ::before reste à l'intérieur de la div */
+    z-index: 1;
+}
+
+.twofa-page-proceed-button, 
+.twofa-page-enable-2fa-button, 
+.twofa-page-disable-2fa-button, 
+.twofa-page-confirm-2fa-button {
+
+    width: 10%;
+    height: 10%;
+}
+
+.twofa-page-proceed-button:hover, 
+.twofa-page-enable-2fa-button:hover, 
+.twofa-page-disable-2fa-button:hover, 
+.twofa-page-confirm-2fa-button:hover {
+
+    background-color: rgb(255, 205, 147);
+    animation: pulse-animation 1s infinite;
+}
+
+@keyframes pulse-animation {
+
+    0% {
+
+        transform: scale(1);
+    }
+    50% {
+
+        transform: scale(1.05);
+    }
+    100% {
+
+        transform: scale(1);
+    }
+}
+
+.twofa-page-proceed-button::before, 
+.twofa-page-enable-2fa-button::before, 
+.twofa-page-disable-2fa-button::before, 
+.twofa-page-confirm-2fa-button::before {
+
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    background-color: rgb(206, 206, 206);
+    transition: top 0.5s ease;
+    z-index: 2;
+}
+
+.twofa-page-proceed-button:hover::before, 
+.twofa-page-enable-2fa-button:hover::before, 
+.twofa-page-disable-2fa-button:hover::before, 
+.twofa-page-confirm-2fa-button:hover::before {
+
+    top: 100%;
+}
+
+.twofa-page-proceed-button > span, 
+.twofa-page-enable-2fa-button > span, 
+.twofa-page-disable-2fa-button > span, 
+.twofa-page-confirm-2fa-button > span {
+
+    position: absolute;
+    width: auto;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform-origin: center center;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    font-size: 15px;
+    transition: color 1s ease;
+    z-index: 3;
+}
+
+.twofa-page-proceed-button:hover > span, 
+.twofa-page-enable-2fa-button:hover > span, 
+.twofa-page-disable-2fa-button:hover > span, 
+.twofa-page-confirm-2fa-button:hover > span {
+
+    color: rgb(82, 82, 82);
+}
+
+/* Customisation Password */
+.twofa-page-code-input {
+
+    width: 300px;
+    background: transparent;
+    border: 1px solid rgb(184, 184, 184);
+    border-radius: 4px;
+    margin: 1rem 0 1rem 0;
+    text-align: left;
+    padding: 16px 0 16px 13px;
+    font-size: 15px;
+}
+
+.twofa-page-code-input {
+
+    color: rgb(82, 82, 82);
+}
+
+.twofa-page-code-input {
+
+    border: 1px solid rgb(87, 87, 87);
+}

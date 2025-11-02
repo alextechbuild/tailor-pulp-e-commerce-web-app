@@ -1,0 +1,1030 @@
+.animation-wrapper {
+
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 50%;
+    height: 75%;
+    margin: 4rem 0 4rem 0;
+    padding: 0;
+    background-color: rgb(47,47,47);
+    background-image: url("../../assets/AnimationWrapper/background.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 3px solid black;
+    overflow: hidden;
+}
+
+.animation-wrapper-svg {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: top left;
+}
+
+.animation-wrapper-svg > path {
+
+    fill: none;
+    stroke: #ccc;
+    stroke-width: 0.01;
+    transform: scale(1);
+}
+
+
+
+
+
+
+
+
+/* Global Animation Elements */
+
+.global-animated-point {
+
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    top: 0;
+    left: 0;
+    background-color: #4e4640;
+    border-radius: 50%;
+}
+
+.global-animated-point-animation-beginning {
+
+    animation: global-animated-point-animation-beginning 0.3s linear forwards;
+}
+
+.global-animated-point-animation-ending {
+
+    animation: global-animated-point-animation-ending 0.5s linear forwards;
+}
+
+@keyframes global-animated-point-animation-beginning {
+
+    from {
+        
+        opacity: 0;
+    }
+    to {
+
+        opacity: 1;
+    }
+}
+
+@keyframes global-animated-point-animation-ending {
+
+    from {
+
+        opacity: 1;
+    }
+    to {
+
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+
+/* HomePage Animation Page 1 -> hap1 */
+
+.hap1-animated-background {
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(236, 236, 236);
+    background-image: url("../../assets/AnimationWrapper/HomePageAnimationPage1/hap1-background.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hap1-animated-background-animation-beginning {
+
+    animation: hap1-animated-background-animation-beginning 0.5s linear forwards;
+}
+
+.hap1-animated-background-animation-ending {
+
+    animation: hap1-animated-background-animation-ending 0.5s linear forwards;
+}
+
+@keyframes hap1-animated-background-animation-beginning {
+
+    from {
+        
+        opacity: 1;
+    }
+    to {
+
+        opacity: 1;
+    }
+}
+
+@keyframes hap1-animated-background-animation-ending {
+
+    from {
+        
+        opacity: 1;
+    }
+    to {
+
+        opacity: 1;
+    }
+}
+
+.hap1-animated-sheet {
+
+    position: absolute;
+    width: 35%;
+    height: 50%;
+    top: 0;
+    left: 0;
+    background-color: rgba(236, 236, 236, 0.5);
+    border: 1px solid black;
+}
+
+.hap1-animated-sheet-animation-beginning {
+
+    animation: hap1-animated-sheet-animation-beginning 0.5s linear forwards;
+}
+
+.hap1-animated-sheet-animation-ending {
+
+    animation: hap1-animated-sheet-animation-ending 0.5s linear forwards;
+}
+
+@keyframes hap1-animated-sheet-animation-beginning {
+
+    from {
+        
+        opacity: 0;
+        transform: scale(1);
+    }
+    to {
+
+        opacity: 1;
+        transform: scale(2);
+    }
+}
+
+@keyframes hap1-animated-sheet-animation-ending {
+
+    from {
+
+        opacity: 1;
+        transform: scale(2);
+    }
+    to {
+
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+.hap1-animated-pencil {
+
+    position: absolute;
+    width: 10%;
+    height: 16%;
+    top: 0;
+    left: 0;
+    background-image: url("../../assets/AnimationWrapper/HomePageAnimationPage1/hap1-animated-pencil.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hap1-animated-pencil-animation-beginning {
+
+    animation: hap1-animated-pencil-animation-beginning 0.3s linear forwards;
+}
+
+.hap1-animated-pencil-animation-ending {
+
+    animation: hap1-animated-pencil-animation-ending 0.3s linear forwards;
+}
+
+@keyframes hap1-animated-pencil-animation-beginning {
+
+    from {
+        
+        opacity: 0;
+    }
+    to {
+
+        opacity: 1;
+    }
+}
+
+@keyframes hap1-animated-pencil-animation-ending {
+
+    from {
+
+        opacity: 1;
+    }
+    to {
+
+        opacity: 0;
+    }
+}
+
+.hap1-animated-splash {
+
+    position: absolute;
+    width: 10%;
+    height: 20%;
+    top: 0;
+    left: 0;
+    background-image: url("../../assets/AnimationWrapper/HomePageAnimationPage1/hap1-animated-splash.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hap1-animated-splash-animation-beginning {
+
+    animation: hap1-animated-splash-animation-beginning 0.5s linear forwards;
+}
+
+.hap1-animated-splash-animation-ending {
+
+    animation: hap1-animated-splash-animation-ending 0.5s linear forwards;
+}
+
+@keyframes hap1-animated-splash-animation-beginning {
+
+    from {
+        
+        opacity: 0;
+        transform: scale(1);
+    }
+    to {
+
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+@keyframes hap1-animated-splash-animation-ending {
+
+    from {
+        
+        opacity: 1;
+        transform: scale(6);
+    }
+    to {
+
+        opacity: 0;
+        transform: scale(2);
+    }
+}
+
+
+
+
+
+
+
+
+/* HomePage Animation Page 2 -> hap2 */
+
+.hap2-animated-background {
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(236, 236, 236);
+}
+
+.hap2-animated-background-animation-beginning {
+
+    animation: hap2-animated-background-animation-beginning 0.5s linear forwards;
+}
+
+.hap2-animated-background-animation-ending {
+
+    animation: hap2-animated-background-animation-ending 0.5s linear forwards;
+}
+
+@keyframes hap2-animated-background-animation-beginning {
+
+    from {
+        
+        opacity: 1;
+    }
+    to {
+
+        opacity: 1;
+    }
+}
+
+@keyframes hap2-animated-background-animation-ending {
+
+    from {
+        
+        opacity: 1;
+    }
+    to {
+
+        opacity: 1;
+    }
+}
+
+.hap2-animated-table {
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(236, 236, 236);
+    background-image: url("../../assets/AnimationWrapper/HomePageAnimationPage2/hap2-table.png");
+    background-size: 100% 100%;
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
+.hap2-animated-table-animation-beginning {
+
+    animation: hap2-animated-table-animation-beginning 0.5s linear forwards;
+}
+
+.hap2-animated-table-animation-ending {
+
+    animation: hap2-animated-table-animation-ending 0.5s linear forwards;
+}
+
+@keyframes hap2-animated-table-animation-beginning {
+
+    from {
+        
+        opacity: 1;
+    }
+    to {
+
+        opacity: 1;
+    }
+}
+
+@keyframes hap2-animated-table-animation-ending {
+
+    from {
+        
+        opacity: 1;
+    }
+    to {
+
+        opacity: 1;
+    }
+}
+
+.hap2-animated-tshirt {
+
+    position: absolute;
+    width: 16rem;
+    height: 16rem;
+    top: 0;
+    left: 0;
+    background-image: url("../../assets/AnimationWrapper/HomePageAnimationPage2/hap2-tshirt.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hap2-animated-tshirt-animation-beginning {
+
+    animation: hap2-animated-tshirt-animation-beginning 9s linear forwards;
+}
+
+.hap2-animated-tshirt-animation-ending {
+
+    animation: hap2-animated-tshirt-animation-ending 0.5s linear forwards;
+}
+
+@keyframes hap2-animated-tshirt-animation-beginning {
+
+    from {
+        
+        opacity: 1;
+        transform: scaleY(0.1);
+        transform-origin: top center;
+    }
+    to {
+
+        opacity: 1;
+        transform: scaleY(1);
+    }
+}
+
+@keyframes hap2-animated-tshirt-animation-ending {
+
+    from {
+        
+        opacity: 1;
+        transform: scaleY(1);
+    }
+    to {
+
+        opacity: 0;
+        transform: scaleY(1);
+    }
+}
+
+.hap2-animated-knitting-needles {
+
+    position: absolute;
+    width: 8rem;
+    height: 8rem;
+    top: 0;
+    left: 0;
+    background-image: url("../../assets/AnimationWrapper/HomePageAnimationPage2/hap2-knitting-needles.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hap2-animated-knitting-needles-animation-beginning {
+
+    animation: hap2-animated-knitting-needles-animation-beginning 0.5s linear forwards;
+}
+
+.hap2-animated-knitting-needles-animation-ending {
+
+    animation: hap2-animated-knitting-needles-animation-ending 0.5s linear forwards;
+}
+
+@keyframes hap2-animated-knitting-needles-animation-beginning {
+
+    from {
+        
+        opacity: 0;
+    }
+    to {
+
+        opacity: 1;
+    }
+}
+
+@keyframes hap2-animated-knitting-needles-animation-ending {
+
+    from {
+        
+        opacity: 1;
+    }
+    to {
+
+        opacity: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* HomePage Animation Page 3 -> hap3 */
+
+.hap3-animated-background {
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(236, 236, 236);
+}
+
+.hap3-animated-background-animation-beginning {
+
+    animation: hap3-animated-background-animation-beginning 0.5s linear forwards;
+}
+
+.hap3-animated-background-animation-ending {
+
+    animation: hap3-animated-background-animation-ending 0.5s linear forwards;
+}
+
+@keyframes hap3-animated-background-animation-beginning {
+
+    from {
+        
+        opacity: 1;
+    }
+    to {
+
+        opacity: 1;
+    }
+}
+
+@keyframes hap3-animated-background-animation-ending {
+
+    from {
+        
+        opacity: 1;
+    }
+    to {
+
+        opacity: 1;
+    }
+}
+
+.hap3-animated-house {
+
+    position: absolute;
+    width: 20%;
+    height: 40%;
+    top: 0;
+    left: 0;
+    background-image: url("../../assets/AnimationWrapper/HomePageAnimationPage3/hap3-houses.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hap3-animated-house-animation-beginning {
+
+    animation: hap3-animated-house-animation-beginning 0.5s linear forwards;
+}
+
+.hap3-animated-house-animation-ending {
+
+    animation: hap3-animated-house-animation-ending 0.5s linear forwards;
+}
+
+@keyframes hap3-animated-house-animation-beginning {
+
+    from {
+        
+        opacity: 0;
+    }
+    to {
+
+        opacity: 1;
+    }
+}
+
+@keyframes hap3-animated-house-animation-ending {
+
+    from {
+        
+        opacity: 1;
+    }
+    to {
+
+        opacity: 0;
+    }
+}
+
+.hap3-animated-forest {
+
+    position: absolute;
+    width: 20%;
+    height: 40%;
+    top: 0;
+    left: 0;
+    background-image: url("../../assets/AnimationWrapper/HomePageAnimationPage3/hap3-forests.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hap3-animated-forest-animation-beginning {
+
+    animation: hap3-animated-forest-animation-beginning 0.5s linear forwards;
+}
+
+.hap3-animated-forest-animation-ending {
+
+    animation: hap3-animated-forest-animation-ending 0.5s linear forwards;
+}
+
+@keyframes hap3-animated-forest-animation-beginning {
+
+    from {
+        
+        opacity: 0;
+    }
+    to {
+
+        opacity: 1;
+    }
+}
+
+@keyframes hap3-animated-forest-animation-ending {
+
+    from {
+        
+        opacity: 1;
+    }
+    to {
+
+        opacity: 0;
+    }
+}
+
+.hap3-animated-truck {
+
+    position: absolute;
+    width: 30%;
+    height: 46%;
+    top: 0;
+    left: 0;
+    background-image: url("../../assets/AnimationWrapper/HomePageAnimationPage3/hap3-truck.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hap3-animated-truck-animation-beginning {
+
+    animation: hap3-animated-truck-animation-beginning 0.5s linear forwards;
+}
+
+.hap3-animated-truck-animation-ending {
+
+    animation: hap3-animated-truck-animation-ending 0.5s linear forwards;
+}
+
+@keyframes hap3-animated-truck-animation-beginning {
+
+    from {
+        
+        opacity: 0;
+    }
+    to {
+
+        opacity: 1;
+    }
+}
+
+@keyframes hap3-animated-truck-animation-ending {
+
+    from {
+        
+        opacity: 1;
+    }
+    to {
+
+        opacity: 0;
+    }
+}
+
+.hap3-animated-box {
+
+    position: absolute;
+    width: 10%;
+    height: 20%;
+    top: 0;
+    left: 0;
+    background-image: url("../../assets/AnimationWrapper/HomePageAnimationPage3/hap3-box.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hap3-animated-box-animation-beginning {
+
+    animation: hap3-animated-box-animation-beginning 0.5s linear forwards;
+}
+
+.hap3-animated-box-animation-ending {
+
+    animation: hap3-animated-box-animation-ending 0.5s linear forwards;
+}
+
+@keyframes hap3-animated-box-animation-beginning {
+
+    from {
+        
+        opacity: 0;
+    }
+    to {
+
+        opacity: 1;
+    }
+}
+
+@keyframes hap3-animated-box-animation-ending {
+
+    from {
+        
+        opacity: 1;
+    }
+    to {
+
+        opacity: 0;
+    }
+}
+
+.hap3-animated-confetti1 {
+
+    position: absolute;
+    width: 3%;
+    height: 4%;
+    top: 0;
+    left: 0;
+    background-image: url("../../assets/AnimationWrapper/HomePageAnimationPage3/hap3-confetti1.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hap3-animated-confetti1-animation-beginning {
+
+    animation: hap3-animated-confetti1-animation-beginning 0.5s linear forwards;
+}
+
+.hap3-animated-confetti1-animation-ending {
+
+    animation: hap3-animated-confetti1-animation-ending 0.5s linear forwards;
+}
+
+@keyframes hap3-animated-confetti1-animation-beginning {
+
+    from {
+        
+        opacity: 0;
+    }
+    to {
+
+        opacity: 1;
+    }
+}
+
+@keyframes hap3-animated-confetti1-animation-ending {
+
+    from {
+        
+        opacity: 1;
+    }
+    to {
+
+        opacity: 0;
+    }
+}
+
+.hap3-animated-confetti2 {
+
+    position: absolute;
+    width: 3%;
+    height: 4%;
+    top: 0;
+    left: 0;
+    background-image: url("../../assets/AnimationWrapper/HomePageAnimationPage3/hap3-confetti2.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hap3-animated-confetti2-animation-beginning {
+
+    animation: hap3-animated-confetti2-animation-beginning 0.5s linear forwards;
+}
+
+.hap3-animated-confetti2-animation-ending {
+
+    animation: hap3-animated-confetti2-animation-ending 0.5s linear forwards;
+}
+
+@keyframes hap3-animated-confetti2-animation-beginning {
+
+    from {
+        
+        opacity: 0;
+    }
+    to {
+
+        opacity: 1;
+    }
+}
+
+@keyframes hap3-animated-confetti2-animation-ending {
+
+    from {
+        
+        opacity: 1;
+    }
+    to {
+
+        opacity: 0;
+    }
+}
+
+.hap3-animated-confetti3 {
+
+    position: absolute;
+    width: 3%;
+    height: 4%;
+    top: 0;
+    left: 0;
+    background-image: url("../../assets/AnimationWrapper/HomePageAnimationPage3/hap3-confetti3.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hap3-animated-confetti3-animation-beginning {
+
+    animation: hap3-animated-confetti3-animation-beginning 0.5s linear forwards;
+}
+
+.hap3-animated-confetti3-animation-ending {
+
+    animation: hap3-animated-confetti3-animation-ending 0.5s linear forwards;
+}
+
+@keyframes hap3-animated-confetti3-animation-beginning {
+
+    from {
+        
+        opacity: 0;
+    }
+    to {
+
+        opacity: 1;
+    }
+}
+
+@keyframes hap3-animated-confetti3-animation-ending {
+
+    from {
+        
+        opacity: 1;
+    }
+    to {
+
+        opacity: 0;
+    }
+}
+
+.hap3-animated-confetti4 {
+
+    position: absolute;
+    width: 3%;
+    height: 4%;
+    top: 0;
+    left: 0;
+    background-image: url("../../assets/AnimationWrapper/HomePageAnimationPage3/hap3-confetti4.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hap3-animated-confetti4-animation-beginning {
+
+    animation: hap3-animated-confetti4-animation-beginning 0.5s linear forwards;
+}
+
+.hap3-animated-confetti4-animation-ending {
+
+    animation: hap3-animated-confetti4-animation-ending 0.5s linear forwards;
+}
+
+@keyframes hap3-animated-confetti4-animation-beginning {
+
+    from {
+        
+        opacity: 0;
+    }
+    to {
+
+        opacity: 1;
+    }
+}
+
+@keyframes hap3-animated-confetti4-animation-ending {
+
+    from {
+        
+        opacity: 1;
+    }
+    to {
+
+        opacity: 0;
+    }
+}
+
+.hap3-animated-trousers {
+
+    position: absolute;
+    width: 10%;
+    height: 16%;
+    top: 0;
+    left: 0;
+    background-image: url("../../assets/AnimationWrapper/HomePageAnimationPage3/hap3-trousers.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hap3-animated-trousers-animation-beginning {
+
+    animation: hap3-animated-trousers-animation-beginning 0.5s linear forwards;
+}
+
+.hap3-animated-trousers-animation-ending {
+
+    animation: hap3-animated-trousers-animation-ending 1s linear forwards;
+}
+
+@keyframes hap3-animated-trousers-animation-beginning {
+
+    from {
+        
+        opacity: 0;
+    }
+    to {
+
+        opacity: 0;
+    }
+}
+
+@keyframes hap3-animated-trousers-animation-ending {
+
+    from {
+        
+        opacity: 1;
+    }
+    to {
+
+        opacity: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 400px) and (max-width: 600px) {
+
+    .animation-wrapper {
+
+        width: 100%;
+        height: 50%;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 1900px) {
+
+    .global-animated-point {
+
+        position: absolute;
+        width: 1%;
+        height: 1%;
+        top: 0;
+        left: 0;
+        background-color: #4e4640;
+        border-radius: 50%;
+    }
+}

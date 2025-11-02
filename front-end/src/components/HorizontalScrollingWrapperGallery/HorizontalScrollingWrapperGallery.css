@@ -1,0 +1,231 @@
+/* .horizontal-scrolling-wrapper -> hswg */
+.horizontal-scrolling-wrapper-gallery {
+
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 100%;
+    height: 90%;
+    margin: 0 0 4rem 0;
+    padding: 0;
+    /*
+    background-color: rgb(172, 126, 59);
+    */
+    background: transparent;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.horizontal-scrolling-wrapper-gallery-content {
+
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 90%;
+    height: 90%;
+    top: 50%;
+    left: 50%;
+    transform-origin: center center;
+    transform: translate(-50%, -50%);
+    /*
+    background-color: darkcyan;
+    */
+    background: linear-gradient(
+    to right,
+    rgba(236, 236, 236, 0.65) 0%, 
+    rgba(236, 236, 236, 0.65) 100%
+    ), 
+    url("../../assets/HomePage/studio.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: repeat;
+    border-radius: 10px;
+    overflow-y: hidden;
+    overflow-x: visible;
+    gap: 10rem;
+    padding: 1rem;
+    z-index: 3;
+}
+
+
+.horizontal-scrolling-wrapper-gallery-content:focus {
+
+    outline: none;
+    border: 1px solid black;
+}
+
+.horizontal-scrolling-wrapper-gallery-content > div {
+
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    flex-wrap: nowrap;
+    width: 60%;
+    height: 90%;
+    transform-origin: center center;
+    transition: transform 0.3s ease, opacity 1s ease;
+    overflow: hidden;
+    gap: 2rem;
+}
+
+.horizontal-scrolling-wrapper-gallery-content > div.hswgc-active {
+
+    transform: translateY(0%);
+    opacity: 1;
+}
+
+.horizontal-scrolling-wrapper-gallery-content > div.hswgc-exit {
+
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+.horizontal-scrolling-wrapper-gallery-content > div > img {
+
+    position: relative;
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.hswgc-description {
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-shrink: 1;
+    flex-wrap: nowrap;
+    width: 40%;
+    height: 99%;
+    overflow: hidden;
+    background-color: rgba(250, 183, 143, 0.5);
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.hswgc-description > h5 {
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    margin: 2rem 1rem 1rem 1rem;
+    text-align: center;
+}
+
+.hswgc-description > p {
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    margin: 1rem;
+    text-align: left;
+}
+
+.hswgc-description-tooltip {
+
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    font-size: 16px !important;
+}
+
+@media (min-width: 400px) and (max-width: 1400px) {
+
+    .horizontal-scrolling-wrapper-gallery {
+
+        margin-bottom: 0rem;
+    }
+
+    .horizontal-scrolling-wrapper-gallery-content {
+
+        width: 100%;
+        height: 100%;
+    }
+
+    .horizontal-scrolling-wrapper-gallery-content > div {
+
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        flex-shrink: 0;
+        flex-wrap: nowrap;
+        width: 100%;
+        height: 90%;
+        overflow: hidden;
+        gap: 2rem;
+        border: 1px solid black;
+        border-radius: 20px;
+        background-color: rgba(250, 183, 143, 0.5);
+    }
+
+    .horizontal-scrolling-wrapper-gallery-content > div > img {
+
+        width: auto;
+        height: auto;
+        max-width: 40%;
+        max-height: 40%;
+        object-fit: contain;
+        margin-top: 20px;
+    }
+
+    .hswgc-description {
+
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: nowrap;
+        width: 100%;
+        height: 40%;
+        overflow: hidden;
+        border: none;
+        text-align: center;
+        background: transparent;
+    }
+
+    .hswgc-description > h5 {
+
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: auto;
+        margin: 10px;
+        text-align: center;
+    }
+
+    .hswgc-description > p {
+
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        margin: 10px;
+        text-align: center;
+    }
+}
+
+@media (min-width: 1001px) and (max-width: 1900px) {
+
+    .horizontal-scrolling-wrapper-gallery-content > div {
+
+        width: 60%;
+        height: 90%;
+    }
+
+    .hswgc-description-tooltip {
+
+        left: 65%;
+    }
+}

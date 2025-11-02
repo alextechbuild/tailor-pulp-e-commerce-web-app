@@ -1,0 +1,119 @@
+.wrapper-clothes-discovery {
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 0;
+    width: 100%;
+    height: 30%;
+    margin: 2rem 0 0 0;
+    padding: 0;
+    background: transparent;
+    text-align: center;
+    overflow: hidden;
+}
+
+.wrapper-clothes-discovery > h5 {
+
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    font-size: 25px;
+}
+
+.wrapper-clothes-discovery > h4 {
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+
+/* Action Button */
+.wrapper-clothes-discovery-button {
+
+    position: relative;
+    flex-shrink: 0;
+    width: 125px;
+    height: 45px;
+    transform-origin: center center;
+    transform: scale(1);
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 174, 110);
+    cursor: pointer;
+    overflow: hidden; /* Pour que le ::before reste à l'intérieur de la div */
+    border: 0.5px solid black;
+    z-index: 1;
+}
+
+.wrapper-clothes-discovery-button:hover {
+
+    animation: wrapper-clothes-discovery-button-animation 1s infinite;
+}
+
+@keyframes wrapper-clothes-discovery-button-animation {
+
+    0% {
+
+        transform: scale(1);
+    }
+    50% {
+
+        transform: scale(1.05);
+    }
+    100% {
+
+        transform: scale(1);
+    }
+}
+
+.wrapper-clothes-discovery-button::before {
+
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    left: 0%;
+    background-color: rgb(255, 221, 193);
+    transition: top 0.3s ease;
+    z-index: 2;
+}
+
+.wrapper-clothes-discovery-button:hover::before {
+
+    top: 0%;
+}
+
+.wrapper-clothes-discovery-button span {
+
+    position: absolute;
+    width: auto;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform-origin: center center;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    transition: color 1s ease;
+    z-index: 3;
+}
+
+.wrapper-clothes-discovery-button:hover span {
+
+    color: rgb(33, 33, 33);
+}
+
+@media (min-width: 400px) and (max-width: 1900px) {
+
+    .wrapper-clothes-discovery > h5 {
+
+        font-size: 20px;
+    }
+
+    .wrapper-clothes-discovery > h4 {
+
+        font-size: 25px;
+    }
+}

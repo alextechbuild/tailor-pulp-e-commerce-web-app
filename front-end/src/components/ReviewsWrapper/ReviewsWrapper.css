@@ -1,0 +1,194 @@
+.reviews-wrapper {
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-shrink: 0;
+    width: 100%;
+    height: 40%;
+    margin: 0;
+    padding: 0;
+    /*
+    background-color: green;
+    */
+    background: rgba(255, 211, 175, 0.2);
+    border-top: 1px solid black;
+}
+
+.reviews-wrapper > h4 {
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    text-align: center;
+    color: black;
+}
+
+.reviews-wrapper-el > div {
+
+    position: absolute;
+    display: block;
+    width: 50%;
+    height: 60%;
+    top: 0%;
+    left: 50%;
+    transform-origin: center center;
+    transform: translateX(-50%);
+    transition: opacity 1s ease;
+    opacity: 0;
+    overflow: hidden;
+    font-size: 2rem;
+    margin-top: 6rem;
+    /*
+    color: wheat;
+    */
+    z-index: 2;
+}
+
+.reviews-wrapper-el > div.active {
+
+    transform-origin: center center;
+    opacity: 1;
+}
+
+.reviews-wrapper-el > div.exit-right {
+
+    transform-origin: center center;
+    opacity: 0;
+}
+
+.reviews-wrapper-el-description {
+
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    top: 50%;
+    left: 50%;
+    transform-origin: center center;
+    transform: translateX(-50%) translateY(-50%);
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+.reviews-wrapper-el-description > p {
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin: 0;
+    text-align: center;
+    color: black;
+}
+
+.reviews-wrapper-el-description > h5 {
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    margin: 10px;
+    text-align: center;
+    color: black;
+}
+
+.rw-loader-wrapper {
+
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 100%;
+    height: 2%;
+    gap: 1rem; /* Gap pour futur enfant qui deviendra nouveau parent potentiel avec position : relative */
+    margin: 0rem 0rem 8rem 0rem;
+    padding-bottom: 2rem;
+    background: rgba(255, 211, 175, 0.2);
+    border-bottom: 1px solid black;
+}
+
+.rw-loader-point {
+
+    position: relative;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.rw-loader-point svg {
+
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: rotate(0deg);
+}
+
+.rw-loader-point svg circle {
+
+    fill: none;
+    stroke: rgb(33, 33, 33);
+    stroke-width: 2;
+    stroke-dasharray: 50.26; /* 2 PI R avec R = r_svg_html */
+    stroke-dashoffset: 50.26;
+}
+
+.rw-loader-point::before {
+
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    background: rgb(33, 33, 33);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media (min-width: 400px) and (max-width: 1000px) {
+
+    .reviews-wrapper {
+
+        height: 45%;
+    }
+
+    .reviews-wrapper > h4 {
+
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 30px;
+        text-align: center;
+        color: black;
+    }
+
+    .reviews-wrapper-el > div {
+
+        width: 90%;
+        height: 60%;
+        margin-top: 6rem;
+    }
+
+    .reviews-wrapper-el-description > p {
+
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        margin: 0;
+        text-align: center;
+        color: black;
+    }
+
+    .reviews-wrapper-el-description > h5 {
+
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        margin: 10px;
+        text-align: center;
+        color: black;
+    }
+}

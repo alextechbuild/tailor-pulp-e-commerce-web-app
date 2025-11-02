@@ -1,0 +1,447 @@
+.logging-page {
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+    z-index: 0;
+}
+
+/* Customisation Overlay */
+.logging-page > svg {
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.logging-page-overlay {
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(236, 236, 236);
+    clip-path: url(#logging-page-clip-path-id);
+    z-index: 1;
+}
+
+.logging-page-strip-1-overlay, 
+.logging-page-strip-2-overlay, 
+.logging-page-strip-3-overlay, 
+.logging-page-strip-4-overlay {
+
+    position: absolute;
+    top: 0;
+    width: 25%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.logging-page-strip-1-overlay {
+
+    left: 0%;
+    background-color: rgb(255, 221, 193);
+}
+
+.logging-page-strip-2-overlay {
+
+    left: 25%;
+    background-color: rgb(250, 183, 143);
+}
+
+.logging-page-strip-3-overlay {
+
+    left: 50%;
+    background-color: rgb(255, 174, 110);
+}
+
+.logging-page-strip-4-overlay {
+
+    left: 75%;
+    background-color: rgb(255, 161, 73);
+}
+
+.logging-page-wrapper {
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+    z-index: 0; /* z-index en 1 quand overlay est fini */
+}
+
+.logging-page-maincontent {
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    top: auto;
+    left: auto;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(236, 236, 236);
+    background-image: url("../../assets/LoggingPage/background_part1.png"), url("../../assets/LoggingPage/background_part2.png");
+    background-size: 50% 100%, 50% 100%;
+    background-position: left, right;
+    background-repeat: no-repeat, no-repeat;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 0;
+}
+
+.google-login {
+
+    position: absolute;
+    top: 70%;
+    left: 48%;
+    transform-origin: center center;
+    transform: translate(-50%, -50%);
+    margin: 2rem 0 0 2rem;
+}
+
+
+/* Customisation Signup Login Buttons */
+.animated-button-wrapper {
+
+    position: relative;
+    display: flex;
+    flex-shrink: 0;
+    width: 200px;
+    height: 50px;
+    margin: 4rem 0 4rem 0;
+    padding: 0;
+    transform-origin: center center;
+    cursor: pointer;
+    box-shadow: 0 0 0px 0px rgb(236, 236, 236);
+    transition: box-shadow 2s ease;
+    z-index: 1;
+}
+
+.animated-button-wrapper:hover {
+
+    box-shadow: 0 0 100px 100px rgb(216, 216, 216);
+}
+
+.logging-page-signup-signup-button,
+.logging-page-login-login-button {
+
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform-origin: center center;
+    transform: translate(-50%, -50%);
+    background-color: rgb(236,236,236);
+    cursor: pointer;
+    overflow: visible; /* ou overflow hidden pour cacher les lettres qui débordent du wrapper au début de l'animation */
+    border: 1px solid black;
+    z-index: 2;
+}
+
+.logging-page-signup-signup-button > span,
+.logging-page-login-login-button > span {
+
+    position: absolute;
+    display: flex;
+    width: auto;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform-origin: center center;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    font-size: 1rem;
+    z-index: 2;
+}
+
+.logging-page-signup-signup-button > span::before,
+.logging-page-login-login-button > span::before {
+
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    top: 75%;
+    left: 50%;
+    transform-origin: center center;
+    transform: translateX(-50%);
+    background-color: rgba(76, 76, 76);
+    transition: width 0.25s ease;
+    z-index: 3;
+}
+
+/* Quand bouton survolé, applique les styles à un span::before à l’intérieur de bouton */
+.logging-page-signup-signup-button:hover > span::before,
+.logging-page-login-login-button:hover > span::before {
+
+    width: 100%;
+}
+
+.signup-page-wrapper,
+.logging-page-login-wrapper, 
+.logging-page-configuration-wrapper {
+
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    margin: 2rem 0 2rem 0;
+    border: 1px solid rgb(184, 184, 184);
+    background: rgb(236, 236, 236);
+}
+
+/* Customisation Password */
+.signup-page-wrapper-signup-password-input, 
+.logging-page-wrapper-login-password-input, 
+.logging-page-wrapper-login-email-button {
+
+    width: 80%;
+    background: transparent;
+    border: 1px solid rgb(184, 184, 184);
+    border-radius: 4px;
+    margin: 1rem 0 1rem 0;
+    text-align: left;
+    padding: 16px 0 16px 13px;
+    font-size: 15px;
+}
+
+.signup-page-wrapper-signup-password-input::placeholder, 
+.logging-page-wrapper-login-password-input::placeholder {
+
+    color: rgb(82, 82, 82);
+}
+
+.signup-page-wrapper-signup-password-input:hover, 
+.logging-page-wrapper-login-password-input:hover {
+
+    border: 1px solid rgb(87, 87, 87);
+}
+
+.signup-page-wrapper-signup-toggle-password-button, 
+.logging-page-wrapper-login-toggle-password-button {
+
+    width: 8%;
+    margin-left: 4px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Newsletter */
+.signup-page-wrapper-signup-newsletter-checkbox {
+
+    accent-color: orange;
+}
+
+/* Customisation Action Confirmation Buttons */
+.signup-page-wrapper-signup-login-switch-button, 
+.logging-page-signup-confirm-button,
+.logging-page-wrapper-signup-login-switch-button,
+.logging-page-wrapper-login-reset-password-button,
+.logging-page-wrapper-login-confirm-button, 
+.logging-page-enable-2fa-button, 
+.logging-page-disable-2fa-button, 
+.logging-page-logout-unsubscribe-button, 
+.logging-page-logout-sign-out-button, 
+.logging-page-logout-confirm-button {
+
+    position: relative;
+    flex-shrink: 0;
+    transform-origin: center center;
+    transform: scale(1);
+    margin: 1rem auto 1rem auto;
+    padding: 1rem 0 1rem 0;
+    background-color: rgb(206, 206, 206);
+    border: 0.5px solid rgb(82, 82, 82);
+    border-radius: 4px;
+    cursor: pointer;
+    overflow: hidden; /* Pour que le ::before reste à l'intérieur de la div */
+    z-index: 1;
+}
+
+.signup-page-wrapper-signup-login-switch-button, 
+.logging-page-signup-confirm-button,
+.logging-page-wrapper-signup-login-switch-button,
+.logging-page-wrapper-login-reset-password-button, 
+.logging-page-enable-2fa-button, 
+.logging-page-disable-2fa-button, 
+.logging-page-logout-unsubscribe-button, 
+.logging-page-logout-sign-out-button, 
+.logging-page-logout-confirm-button {
+
+    width: 90%;
+    height: 100%;
+}
+
+.logging-page-wrapper-login-confirm-button {
+
+    width: 100%;
+    height: 10%;
+}
+
+.signup-page-wrapper-signup-login-switch-button:hover, 
+.logging-page-signup-confirm-button:hover, 
+.logging-page-wrapper-signup-login-switch-button:hover, 
+.logging-page-wrapper-login-reset-password-button:hover, 
+.logging-page-wrapper-login-confirm-button:hover, 
+.logging-page-enable-2fa-button:hover, 
+.logging-page-disable-2fa-button:hover, 
+.logging-page-logout-unsubscribe-button:hover, 
+.logging-page-logout-sign-out-button:hover, 
+.logging-page-logout-confirm-button:hover {
+
+    background-color: rgb(255, 205, 147);
+    animation: pulse-animation 1s infinite;
+}
+
+@keyframes pulse-animation {
+
+    0% {
+
+        transform: scale(1);
+    }
+    50% {
+
+        transform: scale(1.05);
+    }
+    100% {
+
+        transform: scale(1);
+    }
+}
+
+.signup-page-wrapper-signup-login-switch-button::before, 
+.logging-page-signup-confirm-button::before, 
+.logging-page-wrapper-signup-login-switch-button::before, 
+.logging-page-wrapper-login-reset-password-button::before, 
+.logging-page-wrapper-login-confirm-button::before,
+.logging-page-enable-2fa-button::before, 
+.logging-page-disable-2fa-button::before, 
+.logging-page-logout-unsubscribe-button::before, 
+.logging-page-logout-sign-out-button::before, 
+.logging-page-logout-confirm-button::before {
+
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    background-color: rgb(206, 206, 206);
+    transition: top 0.5s ease;
+    z-index: 2;
+}
+
+.signup-page-wrapper-signup-login-switch-button:hover::before, 
+.logging-page-signup-confirm-button:hover::before, 
+.logging-page-wrapper-signup-login-switch-button:hover::before, 
+.logging-page-wrapper-login-reset-password-button:hover::before, 
+.logging-page-wrapper-login-confirm-button:hover::before, 
+.logging-page-enable-2fa-button:hover::before, 
+.logging-page-disable-2fa-button:hover::before, 
+.logging-page-logout-unsubscribe-button:hover::before, 
+.logging-page-logout-sign-out-button:hover::before, 
+.logging-page-logout-confirm-button:hover::before {
+
+    top: 100%;
+}
+
+.signup-page-wrapper-signup-login-switch-button > span, 
+.logging-page-signup-confirm-button > span, 
+.logging-page-wrapper-signup-login-switch-button > span, 
+.logging-page-wrapper-login-reset-password-button > span, 
+.logging-page-wrapper-login-confirm-button > span, 
+.logging-page-enable-2fa-button > span, 
+.logging-page-disable-2fa-button > span, 
+.logging-page-logout-unsubscribe-button > span, 
+.logging-page-logout-sign-out-button > span, 
+.logging-page-logout-confirm-button > span {
+
+    position: absolute;
+    width: auto;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform-origin: center center;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    font-size: 15px;
+    transition: color 1s ease;
+    z-index: 3;
+}
+
+.signup-page-wrapper-signup-login-switch-button:hover > span, 
+.logging-page-signup-confirm-button:hover > span, 
+.logging-page-wrapper-signup-login-switch-button:hover > span, 
+.logging-page-wrapper-login-reset-password-button:hover > span, 
+.logging-page-wrapper-login-confirm-button:hover > span, 
+.logging-page-enable-2fa-button:hover > span, 
+.logging-page-disable-2fa-button:hover > span, 
+.logging-page-logout-unsubscribe-button:hover > span, 
+.logging-page-logout-sign-out-button:hover > span, 
+.logging-page-logout-confirm-button:hover > span {
+
+    color: rgb(82, 82, 82);
+}
+
+
+
+
+@media (min-width: 400px) and (max-width: 1000px) {
+
+    .animated-button-wrapper {
+
+        width: 20%;
+    }
+
+    .animated-button-wrapper {
+
+        box-shadow: 0 0 100px 100px transparent;
+    }
+
+    .animated-button-wrapper:hover {
+
+        box-shadow: 0 0 100px 100px rgba(236, 236, 236, 0.5);
+    }
+
+    .logging-page-signup-signup-button,
+    .logging-page-login-login-button {
+
+        width: 150%;
+    }
+
+    .logging-page-maincontent {
+
+        background-color: rgb(236, 236, 236);
+        background-image: url("../../assets/LoggingPage/background_part2.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
