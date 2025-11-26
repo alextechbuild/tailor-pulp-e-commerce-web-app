@@ -40,6 +40,7 @@ services:
       - ./back-end/certs:/usr/src/app/back-end/certs:ro   # HTTPS en dev
     depends_on:
       - backend
+    command: sh -c "npm install && npm run dev"
 
 volumes:
   db_data:
