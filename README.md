@@ -1,6 +1,6 @@
 # About the project
 
-This project features a **completely fictional company** named Tailor'Pulp, created for **illustrative purposes**.
+This project features a **completely fictional company**, created for **illustrative purposes**.
 **All company names, brands, products, employees, or locations mentioned** in the code, frontend are **fictitious**.
 
 Any resemblance to a real company, whether existing or defunct, is **purely coincidental**.
@@ -52,7 +52,7 @@ e.g. Cookies, JWT Token
 ## 2. Set up the repository
 
 ```bash
-git clone https://github.com/alextechbuild/.git
+git clone https://github.com/alextechbuild/e-commerce-web-app.git
 ```
 
 Navigate to the repository
